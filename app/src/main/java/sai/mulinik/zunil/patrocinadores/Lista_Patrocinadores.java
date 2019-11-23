@@ -19,7 +19,7 @@ import android.view.WindowManager;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
-import com.asociacion.ferias.patrocinadores.ui.main.SectionsPagerAdapter;
+import sai.mulinik.zunil.patrocinadores.ui.main.SectionsPagerAdapter;
 
 import sai.mulinik.zunil.patrocinadores.vista_patrocinadores;
 
@@ -52,7 +52,7 @@ public class Lista_Patrocinadores extends AppCompatActivity implements vista_pat
     }
 
     private void agregarIndicadorPuntos(int pos) {
-        puntosSlide = new TextView[3];
+        puntosSlide = new TextView[4];
         linearPuntos.removeAllViews();
 
         for (int i =0;i<puntosSlide.length;i++){

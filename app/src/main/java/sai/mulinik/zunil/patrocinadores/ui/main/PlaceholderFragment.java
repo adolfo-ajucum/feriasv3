@@ -32,6 +32,7 @@ public class PlaceholderFragment extends Fragment {
             case 1: fragment = new vista_patrocinadores(1); break;
             case 2: fragment = new vista_patrocinadores(2); break;
             case 3: fragment = new vista_patrocinadores(3); break;
+            case 4: fragment = new vista_patrocinadores(3); break;
 
         }
         return fragment;
