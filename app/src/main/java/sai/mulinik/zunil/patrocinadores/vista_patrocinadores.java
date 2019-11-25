@@ -76,10 +76,10 @@ public class vista_patrocinadores extends Fragment implements OnMapReadyCallback
 
     public static class info {
 
-        public String descripcion1, descripcion2, descripcion3;
-        public String facebook1, facebook2, facebook3;
-        public String idpagina1, idpagina2, idpagina3;
-        public String logo1, logo2, logo3;
+        public String descripcion1, descripcion2, descripcion3, descripcion4;
+        public String facebook1, facebook2, facebook3, facebook4;
+        public String idpagina1, idpagina2, idpagina3, idpagina4;
+        public String logo1, logo2, logo3, logo4;
 
 
         public info(){
@@ -127,6 +127,7 @@ public class vista_patrocinadores extends Fragment implements OnMapReadyCallback
     feria pantalla1 = new feria();
     feria pantalla2 = new feria();
     feria pantalla3 = new feria();
+    feria pantalla4 = new feria();
 
     /**
      * Use this factory method to create a new instance of
@@ -190,17 +191,22 @@ public class vista_patrocinadores extends Fragment implements OnMapReadyCallback
         String url = "https://www.mrthink.es/wp-content/uploads/bfi_thumb/foto_mr.-think_blog_la-importancia-del-logo-32kclavus35t2vcikjco8xql1eviv9vku2sb4pxw28ov9n66g.jpg";
         switch (patrocinador){
             case 1:
-                url = "https://firebasestorage.googleapis.com/v0/b/zunil-8cbba.appspot.com/o/patrocinadores%2F%C3%ADndice.jpg?alt=media&token=4c29cf1e-bdbb-4868-b00c-14f3b80b801f";
+                url = "https://firebasestorage.googleapis.com/v0/b/zunilito-7fbfd.appspot.com/o/patro%2Fmuseo.jpg?alt=media&token=b686cc4f-f15c-48dd-865b-d464b90d2f51";
                 FACEBOOK_URL = "https://www.facebook.com/Mulinik-2633364246733665";
                 FACEBOOK_PAGE_ID = "2633364246733665";
                 break;
             case 2:
-                url = "https://firebasestorage.googleapis.com/v0/b/zunil-8cbba.appspot.com/o/patrocinadores%2F%C3%ADndice2.jpg?alt=media&token=93db0d70-1082-4de6-a78c-f67f1bba2bef";
-                FACEBOOK_URL = "https://www.facebook.com/IK-CAF%C3%88-355137874873158/";
-                FACEBOOK_PAGE_ID = "355137874873158";
+                url = "https://firebasestorage.googleapis.com/v0/b/zunilito-7fbfd.appspot.com/o/patro%2Fcasa%20velas.jpg?alt=media&token=c4fd9321-6268-4443-9035-f326fdfd7408";
+                FACEBOOK_URL = "https://www.facebook.com/Mulinik-2633364246733665";
+                FACEBOOK_PAGE_ID = "2633364246733665";
                 break;
             case 3:
-                url = "https://www.mrthink.es/wp-content/uploads/bfi_thumb/foto_mr.-think_blog_la-importancia-del-logo-32kclavus35t2vcikjco8xql1eviv9vku2sb4pxw28ov9n66g.jpg";
+                url = "https://firebasestorage.googleapis.com/v0/b/zunilito-7fbfd.appspot.com/o/patro%2Flogo%20color%20mulinik.png?alt=media&token=34f015d6-c524-4434-903c-9bb7a7da1773";
+                FACEBOOK_URL = "https://www.facebook.com/Mulinik-2633364246733665";
+                FACEBOOK_PAGE_ID = "2633364246733665";
+                break;
+            case 4:
+                url = "https://firebasestorage.googleapis.com/v0/b/zunilito-7fbfd.appspot.com/o/patro%2Flogo%20color%20mulinik.png?alt=media&token=34f015d6-c524-4434-903c-9bb7a7da1773";
                 FACEBOOK_URL = "https://www.facebook.com/Mulinik-2633364246733665";
                 FACEBOOK_PAGE_ID = "2633364246733665";
                 break;
@@ -247,6 +253,13 @@ public class vista_patrocinadores extends Fragment implements OnMapReadyCallback
                         break;
                     case 3:
                         pantalla3.datos(inform.descripcion3, inform.facebook3, inform.idpagina3, inform.logo3);
+                        Picasso.get().load(pantalla3.getLogo()).resize(1500,1600).into(imageView);
+                        informacion.setText(inform.descripcion3);
+                        FACEBOOK_URL = pantalla3.getFacebook();
+                        FACEBOOK_PAGE_ID = pantalla3.getIdpagina();
+                        break;
+                    case 4:
+                        pantalla4.datos(inform.descripcion3, inform.facebook3, inform.idpagina3, inform.logo3);
                         Picasso.get().load(pantalla3.getLogo()).resize(1500,1600).into(imageView);
                         informacion.setText(inform.descripcion3);
                         FACEBOOK_URL = pantalla3.getFacebook();
